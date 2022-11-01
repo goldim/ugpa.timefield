@@ -1,0 +1,35 @@
+{
+ "$schema": "https://qooxdoo.org/schema/Manifest-2-0-0.json",
+  "info" :
+  {
+    "name" : "ugpa.timefield",
+
+    "summary" : "timefield widget",
+    "description" : "select time with scroller",
+
+    "homepage" : "https://github.com/goldim/ugpa.timefield",
+
+    "license" : "MIT license",
+    "authors" : [
+  {
+    "name": "Dmitrii Zolotov (goldim)",
+    "email": "zolotovdy@yandex.ru"
+  }
+],
+
+    "version" : "0.1.0"
+  },
+
+  "provides" :
+  {
+    "namespace"   : "ugpa.timefield",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation"
+  },
+
+  "requires": {
+    "@qooxdoo/framework": "^7.3.3"
+  }
+}
