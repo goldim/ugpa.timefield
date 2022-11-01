@@ -11,7 +11,8 @@
 qx.Class.define("ugpa.timefield.SliderPopup", {
     extend: qx.ui.popup.Popup,
 
-    construct(){
+    construct() {
+        // noinspection JSAnnotator
         super(new qx.ui.layout.HBox());
         this._createChildControl("slider");
     },
@@ -21,7 +22,7 @@ qx.Class.define("ugpa.timefield.SliderPopup", {
     },
 
     members: {
-        setCurrentInput(input){
+        setCurrentInput(input) {
             const slider = this.getChildControl("slider");
             slider.setUserData("input", input);
             slider.setMaximum(input.getMaxValue());
@@ -29,16 +30,16 @@ qx.Class.define("ugpa.timefield.SliderPopup", {
             this.placeToWidget(input);
         },
 
-        _createChildControlImpl(id, hash){
+        _createChildControlImpl(id, hash) {
             let control;
             
-            switch(id) {
-              case "slider":
-                control = new ugpa.timefield.Slider();
-                control.addListener("scrollStop", function(){
-                    this.fireEvent("stopScrolling");
-                }, this);
-                this._add(control);
+            switch (id) {
+                case "slider":
+                    control = new ugpa.timefield.Slider();
+                    control.addListener("scrollStop", function() {
+                        this.fireEvent("stopScrolling");
+                    }, this);
+                    this._add(control);
                 break;
             }
     

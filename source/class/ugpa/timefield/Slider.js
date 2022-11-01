@@ -11,10 +11,10 @@
 qx.Class.define("ugpa.timefield.Slider", {
     extend: qx.ui.form.Slider,
     
-    construct(){
+    construct() {
         // noinspection JSAnnotator
         super("horizontal");
-        this.getChildControl("knob").addListener("touchend", function(){
+        this.getChildControl("knob").addListener("touchend", function() {
             this.fireEvent("scrollStop");
         }, this);
         this.addListener("changeValue", this._onChangeSliderValue, this);
@@ -27,7 +27,7 @@ qx.Class.define("ugpa.timefield.Slider", {
     },
 
     members: {
-        _onChangeSliderValue(e){
+        _onChangeSliderValue(e) {
             const input = e.getTarget().getUserData("input");
             input.setValue(String(e.getData()));
         }
